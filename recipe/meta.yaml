@@ -1,5 +1,5 @@
 {% set name = "rooki" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d9d05fc81046ad1ed5ee9528728644527e812e6822fdd11ce6aeee8426341afe
+  sha256: b8adb6861c5085469278ce55b0feba399b38886d5bc9860f3f5607b426278ad0
 
 build:
   noarch: python
@@ -22,6 +22,8 @@ requirements:
     - python >=3.9
     - click >=6.0
     - birdy >=0.8.2,<0.9.0
+    - owslib
+    - requests
     - netcdf4 >=1.5
     - xarray >=0.16
     - cf_xarray
